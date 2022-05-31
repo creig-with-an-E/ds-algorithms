@@ -72,3 +72,21 @@ const contains_similar_2 = (array_1, array_2) =>{
     // better readability
     return array_1.some(item=> array_2.includes(item))
 }
+
+
+// understanding arrays as a data structure
+// basics
+const strings = ['a', 'b','c','d']
+// 4 x 4 = 16bytes of storage
+
+strings.push('e') // O(1) constant time
+
+// adding to the beginning
+strings.unshift('a1') // O(n)
+// in reality you loop and move all other items to the right
+// for adding to the beginning array may not be best data
+// structures
+
+strings.splice(2,0,'alien')
+
+console.log(strings)
