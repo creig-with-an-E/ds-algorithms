@@ -74,5 +74,28 @@ class BinarySearchTree:
                 return current_node
         return False
 
-    def delete(self):
-        pass
+    def remove(self, value):
+        # check that not empty, if empty return None
+        # start traversing through list
+        # keeping two pointers current_node & parent_node
+        # if less than go left
+        # if greater than go right
+        # when we find the node, we keep ref to node
+        # bypass the node and continue right, if plausible
+        # then find the most left node and 
+        if self.root is None:
+            return None
+        
+        current_node = current_node
+        parent_node = None
+        while current_node is not None:
+            if current_node.value < value:
+                # less than
+                current_node = current_node.left
+            elif current_node > value:
+                current_node = current_node.right
+            elif current_node.value == value:
+                # found node
+                return
+
+        return None
