@@ -47,3 +47,35 @@ def reverse_string_recursive(input_string):
         return ''
     
     return reverse_string_recursive(input_string[1]) + input_string[0]
+
+
+# def merge_sort(self, arr):
+#         # divide and conquor
+#         # recursively split arr in half till we get to a single element
+#         if len(arr) == 1:
+#             return arr
+
+#         middle = math.floor(len(arr)/2)
+#         left = arr[0:middle]
+#         right = arr[middle: len(arr)]
+
+#         return self._merge(
+#                     self.merge_sort(left),
+#                     self.merge_sort(right)
+#                 )
+
+#     def _merge(self, left, right):
+#         result = []
+#         left_index = 0
+#         right_index = 0
+#         while left_index < len(left) and right_index < len(right):
+#             if left[left_index] < right[right_index]:
+#                 result.append(left[left_index])
+#                 left_index += 1
+#             else:
+#                 result.append(right[right_index])
+#                 right_index += 1
+        
+#         result.extend(left[left_index: len(left)])
+#         result.extend(right[right_index:len(right)])
+#         return result
