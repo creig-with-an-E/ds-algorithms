@@ -99,3 +99,29 @@ class BinarySearchTree:
                 return
 
         return None
+    
+    def breadth_first_search(self):
+        '''Iterative breadth first search'''
+        current_node = self.root
+        arr = []
+        queue = []
+        queue.append(self.root)
+
+        while len(queue) > 0:
+            current_node = queue.pop(0)
+            print(current_node.value)
+            arr.append(current_node.value)
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+            
+        return arr
+
+
+def traverse(node):
+    tree = {'value': node.value}
+    tree['left'] = traverse(node.left) if node.left else None
+    tree['right'] = traverse(node.right) if node.right else None
+
+    return tree
